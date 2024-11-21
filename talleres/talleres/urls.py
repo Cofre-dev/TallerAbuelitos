@@ -6,9 +6,10 @@ from . import views
 #Acá es donde escribimos las rutas y urls del proyecto
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('saludo/', views.saludo, name='saludo'),
-    path('despedida/', views.despedida, name='despedida'),
-    path('adulto/<int:edad>/',views.adulto, name='adulto'), #Ejemplo de URL donde hay parametros <int:edad>
-    path('simple/', views.simple, name='simple'),
-    path('dinamico/<str:name>', views.dinamico, name='dinamico'),
+    path('', views.index, name='index'), #Directorio raiz
+    path('herencia/', views.herencia, name='herencia'),
+    path('ejemplo', views.ejemplo, name='ejemplo'),
+    path('otras', views.otras, name='otras'),
+    path('ejercicio', views.ejercicio, name='ejercicio'),
+    path('portfolio', views.portfolio, name='portfolio'),
 ]
