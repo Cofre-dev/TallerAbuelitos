@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>Obteniendo los 10 primeros elementos saldanto los 5 primeros</h3>
+
+    <ul>
+        {% for set in offsets%}
+            <li>{{ set.email }}</li>
+        {% endfor %}
+    </ul>
+
+    
+    <h3>Obteniendo los 10 primeros elementos</h3>
+
+    <ul>
+        {% for limit in limits%}
+            <li>{{ limit.email }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Obteniendo un unico elemento (filtrado por id)</h3>
+
+    <p>{{ Author }}</p>
+
+    <h3>Buscando author por el email</h3>
+    <h5>Ejemplo: christopheranderson@example.net</h5>
+
+    <ul>
+        {% for filter in filtered%}
+
+        <li>{{filter.name}} | {{ filter.email }}</li>
+
+        {% endfor %}
+    </ul>
+
+
+    <h3>Todos los autores</h3>
+    <ul>
+        {% for author in authors%}
+
+        <li>{{author.name}} ({{author.email}})</li>
+
+        {% endfor%}
+
+    </ul>
+
+    <h3>Total de autores:  {{ authors|length }}</h3>
+</body>
+</html>
